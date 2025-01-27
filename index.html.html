@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatra Digital 360</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Navbar Style */
+        .navbar-custom {
+            background-color: #001f3d;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(45deg, #2596be, #001f3d);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+        .btn-cta {
+            margin-top: 30px;
+            padding: 10px 30px;
+            background-color: #2596be;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-cta:hover {
+            background-color: #1a6a8e;
+            transform: translateY(-3px);
+        }
+
+        /* Section Titles */
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #001f3d;
+            margin-bottom: 30px;
+        }
+
+        /* Section Style */
+        .section {
+            padding: 80px 0;
+            color: #333;
+            background-color: #b3e0ff; /* Blue sky background */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow untuk kedalaman */
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover Effect untuk Section */
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Frame untuk Setiap Kolom di dalam Section */
+        .about-section, .services-section, .vision-mission, .contact-section {
+            border: 2px solid #2596be;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover Effect untuk Kolom */
+        .about-section:hover, .services-section:hover, .vision-mission:hover, .contact-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Service List */
+        .service-list li {
+            margin: 10px 0;
+        }
+
+        /* WhatsApp Chat Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: #25d366;
+            font-size: 3rem;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: none;
+            text-decoration: none;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            color: #128c7e;
+            transform: scale(1.1); /* Membesarkan sedikit saat hover */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #001f3d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gatra Digital 360</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision-mission">Visi & Misi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div>
+            <h1>Selamat datang di Gatra Digital 360</h1>
+            <p>Solusi Digital untuk Bisnis Anda</p>
+            <a href="#services" class="btn-cta">Jelajahi Layanan Kami</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Tentang Kami</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Gatra Digital 360 adalah perusahaan yang bergerak di bidang periklanan dan solusi digital yang berkomitmen untuk memberikan layanan terbaik sejak didirikan pada tahun 2017. Dengan visi untuk memberdayakan bisnis melalui teknologi digital, kami menyediakan berbagai layanan, termasuk marketplace, web development, desain kreatif, dan digital printing. Kami memahami bahwa setiap klien memiliki kebutuhan unik, dan kami bertekad untuk memenuhi kebutuhan tersebut melalui pendekatan yang inovatif dan strategis.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/500" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Layanan Kami</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Periklanan</h5>
+                    <ul class="service-list">
+                        <li>Pengembangan strategi iklan yang efektif di berbagai platform digital.</li>
+                        <li>Manajemen kampanye iklan untuk meningkatkan brand awareness dan penjualan.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Marketplace</h5>
+                    <ul class="service-list">
+                        <li>Pembuatan dan pengelolaan platform marketplace yang memungkinkan penjual dan pembeli terhubung dengan mudah dan aman.</li>
+                        <li>Solusi e-commerce yang terintegrasi dengan sistem pembayaran dan logistik.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Web Development</h5>
+                    <ul class="service-list">
+                        <li>Pembangunan website responsif dan user-friendly dengan teknologi terkini.</li>
+                        <li>Pengembangan sistem manajemen konten (CMS) yang memungkinkan klien mengelola konten secara mandiri.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Desain</h5>
+                    <ul class="service-list">
+                        <li>Layanan desain grafis untuk berbagai kebutuhan, mulai dari branding hingga materi pemasaran.</li>
+                        <li>Desain UI/UX yang memastikan pengalaman pengguna yang optimal.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Digital Printing</h5>
+                    <ul class="service-list">
+                        <li>Penyediaan layanan percetakan digital untuk berbagai produk, termasuk banner, brosur, dan merchandise.</li>
+                        <li>Kualitas cetak tinggi dengan pilihan finishing yang beragam.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="section vision-mission">
+        <div class="container">
+            <h2 class="text-center mb-5">Visi dan Misi</h2>
+            <h5>Visi:</h5>
+            <p>Menjadi mitra digital terkemuka yang memberdayakan pelaku bisnis untuk sukses di era digital.</p>
+            <h5>Misi:</h5>
+            <p>Menyediakan solusi kreatif dan inovatif yang membantu klien mencapai tujuan pemasaran dan bisnis mereka melalui layanan yang berkualitas dan dukungan yang handal.</p>
+        </div>
+    </section>
+
+    <!-- Keunggulan Kami Section -->
+    <section class="section keunggulan-kami">
+        <div class="container">
+            <h2 class="text-center mb-5">Keunggulan Kami</h2>
+            <ul class="service-list">
+                <li><strong>Tim Profesional:</strong> Kami memiliki tim yang terdiri dari ahli di bidang periklanan, teknologi, dan desain yang siap membantu mewujudkan visi Anda.</li>
+                <li><strong>Pendekatan Personalisasi:</strong> Kami percaya bahwa setiap klien unik, dan kami menyesuaikan layanan kami agar sesuai dengan kebutuhan spesifik Anda.</li>
+                <li><strong>Inovasi Berkelanjutan:</strong> Kami selalu mengikuti tren terbaru dan teknologi terkini untuk memastikan bahwa solusi yang kami tawarkan selalu relevan dan efektif.</li>
+                <li><strong>Layanan Pelanggan yang Luar Biasa:</strong> Kepuasan klien adalah prioritas utama kami, dan kami berkomitmen untuk memberikan layanan pelanggan yang responsif dan solutif.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Kontak Kami</h2>
+            <p>Untuk informasi lebih lanjut tentang layanan kami atau untuk berdiskusi mengenai proyek Anda, silakan hubungi kami di:</p>
+            <ul class="service-list">
+                <li>Email: <a href="mailto:Gatras360@gmail.com">Gatras360@gmail.com</a></li>
+                <li>Telepon: <a href="tel:+6285813916457">+62 858-1391-6457</a></li>
+                <li>Alamat Kantor: Jalan Harapan Indah, Jakarta</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Gatra Digital 360. Semua Hak Cipta Dilindungi.</p>
+        <p><a href="#">Privasi</a> | <a href="#">Ketentuan</a></p>
+    </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/6285813916457" class="whatsapp-btn" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Link ke Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
